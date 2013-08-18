@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="Scripts/additional-methods.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/common.js"></script>
+
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+<!--    <script type="text/javascript" src="common.js"></script>-->
+    <title></title>
+    <script>
+        $(function() {
+            $( "#accordion" ).accordion();
+        });
+        $(function() {
+            $( "#progressbar" ).progressbar({
+                value: false
+            });
+  /*          $("input").cha
+            $( "button" ).on( "click", function( event ) {
+                var target = $( event.target ),
+                        progressbar = $( "#progressbar" ),
+                        progressbarValue = progressbar.find( ".ui-progressbar-value" );
+
+                if ( target.is( "#numButton" ) ) {
+                    progressbar.progressbar( "option", {
+                        value: Math.floor( Math.random() * 100 )
+                    });
+                }
+            });*/
+        });
+    </script>
+</head>
+<body>
+
+<form class="form b" id="myform" method="get" action="">
+    <div id="accordion">
+        <h3>Год рождения.</h3>
+        <div>
+            <input id="someInput" type="text" class="required digits" maxlength="3" min="1"  />
+        </div>
+        <h3>Город, в котором вы живёте.</h3>
+        <div>
+            <div>
+                <input id="cityInput" type="text" class="required digits" maxlength="3" min="1"  />
+            </div>
+        </div>
+        <h3>Вуз, факультет, специальность, кафедра.</h3>
+        <div>
+            <div>
+                <input id="instituteInput" type="text" class="required digits" maxlength="3" min="1"  />
+            </div>
+        </div>
+        <h3>Год окончания вуза.</h3>
+        <div>
+            <div>
+                <input id="instituteYearInput" type="text" class="required digits" maxlength="3" min="1"  />
+            </div>
+        </div>
+        <h3>Email.</h3>
+        <div>
+            <input type="text" id="email" name="email">
+        </div>
+    </div>
+    <div id="progressbar"></div>
+    <input type="submit" value="Validate!">
+</form>
+
+<!--<button id="numButton">Random Value - Determinate</button>
+<button id="falseButton">Indeterminate</button>
+<button id="colorButton">Random Color</button>-->
+<!--<script>
+    $("#commentForm").validate();
+</script>-->
+</body>
+</html>
+
